@@ -1,0 +1,175 @@
+body {
+  color: white;
+  font-family: 'Segoe UI';
+  height: 100vh;
+  text-shadow: 0.5px 0.5px 2px #000;
+  text-transform: lowercase !important;
+}
+.card {
+  align-items: center;
+  background-image: url('../img/particles.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% 100%;
+  filter: invert();
+  height: 100vh;
+  overflow-x: scroll;
+  width: 100%;
+  scroll-snap-align: center;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-x: repeat(100%);
+  scroll-snap-type: x mandatory;
+}
+.frames {
+  /* box-shadow: -0.3px -0.3px 10px 0.5px #000; */
+  height: 100%;
+  scroll-snap-type: x mandatory;
+}
+.frame {
+  align-items: center;
+  display: grid;
+  height: 100%;
+  scroll-snap-align: none center;
+  text-transform: capitalize;
+}
+.frame p {
+  font-size: 2rem;
+  font-weight: 500;
+}
+.title-frame {
+  text-transform: capitalize;
+}
+.title-frame h1 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.profile-frame div {
+  padding: 40px;
+}
+.contact-frame a {
+  color: white;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.profile-img {
+  background-image: url('../img/fiverrUse.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  background-size: 200% 250%;
+  border: 10px solid transparent;
+  border-radius: 50%;
+  box-shadow: inset 0.5px 0.5px 10px 1px #000;
+  filter: invert();
+  height: 250px;
+  width: 250px;
+}
+.profile-img:hover {
+  transform: scale(1.1);
+}
+.skill-icon {
+  grid-gap: 50px;
+  grid-template-columns: 1fr 1fr;
+}
+.portfolio-boxes {
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  padding: 10px;
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+.box {
+  /* background: transparent; */
+  /* border: 3px solid #000; */
+  border-radius: 10px;
+  box-shadow: inset 0.5px 0.5px 5px 1px #000;
+  /* filter: invert(); */
+  height: 280px;
+  -webkit-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+.face {
+  align-items: center;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  /* line-height: 300px; */
+  color: black;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.front {
+  background-color: #0099cc;
+}
+.back {
+  background-color: white;
+  font-size: 20px;
+  overflow-y: scroll;
+  padding: 10px;
+  scrollbar-width: none;
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+.back img {
+  filter: invert() drop-shadow(0.5px 0.5px 6px black);
+  width: 100%;
+}
+.back img::before {
+  bottom: 0;
+  content: '';
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  box-shadow: inset 0.5px 0.5px 15px 5px #fff;
+}
+.hover:hover {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+/* h3 subheaders */
+h3 {
+  font-family: 'felix titling';
+  font-size: 40px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.primary-color {
+  color: cornflowerblue;
+}
+code {
+  background: transparent;
+  filter: invert();
+  text-shadow: 0.5px 0.5px 2px #000;
+}
+
+/* large Screen */
+@media screen and (min-width: 900px) {
+  .frames {
+    grid-template-columns: 0.7fr 1.3fr;
+    width: 75%;
+  }
+  .col-span-2 {
+    grid-column: 1/3;
+  }
+  .row-span-2 {
+    grid-row: 3/6;
+  }
+  .skill-icon {
+    grid-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .portfolio-boxes {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .box {
+    height: 500px;
+  }
+}

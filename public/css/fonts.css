@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'FELIX TITLING';
+  font-style: normal;
+  font-weight: normal;
+  src: local('FELIX TITLING'), url('./fonts/FELIXTI.TTF') format('TTF');
+}
+@font-face {
+  font-family: 'segoe ui';
+  font-style: normal;
+  font-weight: normal;
+  src: local('segoe ui'), url('./fonts/segoeui.ttf') format('TTF');
+}
