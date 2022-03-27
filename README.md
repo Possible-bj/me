@@ -396,48 +396,47 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 #### Get sermon by its ID
 
-@route: **GET** _/api/sermons/:id_ \n
+@route: **GET** _/api/sermons/:id_ <br />
 @access: Public <br />
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+_:id => sermon id to be updated_: expect value is the \_id property of the sermon <br />
 
-@request\*body: _No request body_
+@request\*body: _No request body_ <br />
 
-@response:
+@response: <br />
 
-> single sermon: {
-> \_id,
-> user_id,
-> category_id,
-> body,
-> topic,
-> brief,
-> status,
-> slug,
-> category
+> single sermon: { <br /> > \_id, <br />
+> user_id, <br />
+> category_id,<br />
+> body,<br />
+> topic,<br />
+> brief,<br />
+> status,<br />
+> slug,<br />
+> category<br />
 > }
 
 #### Get sermon banner
 
-@route: **GET** _/api/sermons/:id/banner_
-@access: Public
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+@route: **GET** _/api/sermons/:id/banner_ <br />
+@access: Public<br />
+_:id => sermon id to be updated_: expect value is the \_id property of the sermon<br />
+<br />
+@request\*body: _No request body_<br />
 
-@request\*body: _No request body_
+@response:<br />
 
-@response:
-
-> img/png Buffer
+> img/png Buffer<br />
 
 #### Update sermon banner
 
-@route: **POST** _/api/sermons/:id/banner_
-@access: Private/Admin
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+@route: **POST** _/api/sermons/:id/banner_<br />
+@access: Private/Admin<br />
+_:id => sermon id to be updated_: expect value is the \_id property of the sermon<br />
 
-@request\*body: send as "form data" containing the file alone
+@request\*body: send as "form data" containing the file alone<br />
 
-> file input of name="banner"
+> file input of name="banner"<br />
 
-@response:
+@response:<br />
 
-> { message: `'Sermon banner updated successfully'` }
+> { message: `'Sermon banner updated successfully'` } <br />
