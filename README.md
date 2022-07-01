@@ -127,7 +127,7 @@ If 2FA is **NOT** enabled then you simply need to enable less secure apps for th
 **@route:** **GET** _/api/users/:id_
 **@access:** Private
 **@authorization:** **_`Bearer <User Token>`_**
-_:id => user id to be fetched_: expect value is the \_id property of the user
+_:id => user id to be fetched_: <br /> expected value is the \_id property of the user
 
 > **@request_body:** _No request body_
 
@@ -140,7 +140,7 @@ _:id => user id to be fetched_: expect value is the \_id property of the user
 **@route:** **PATCH** _/api/users/:id_
 **@access:** Private/Admin
 **@authorization:** **_`Bearer <User Token>`_**
-_:id => user id to be restored_: expect value is the \_id property of the user
+_:id => user id to be restored_: <br /> expected value is the \_id property of the user
 
 > **@request_body:** _No request body_
 
@@ -153,7 +153,7 @@ _:id => user id to be restored_: expect value is the \_id property of the user
 **@route:** **PATCH** _/api/users/admin_status/:id_
 **@access:** Private/Admin
 **@authorization:** **_`Bearer <User Token>`_**
-_:id => user id to be updated_: expect value is the \_id property of the user
+_:id => user id to be updated_: <br /> expected value is the \_id property of the user
 
 > **@request_body:** _No request body_
 
@@ -166,7 +166,7 @@ _:id => user id to be updated_: expect value is the \_id property of the user
 **@route:** **PATCH** _/api/users/trash/:id_
 **@access:** Private/Admin
 **@authorization:** **_`Bearer <User Token>`_**
-_:id => user id to be Trashed_: expect value is the \_id property of the user
+_:id => user id to be Trashed_: <br /> expected value is the \_id property of the user
 
 > **@request_body:** _No request body_
 
@@ -211,7 +211,7 @@ _:id => user id to be Trashed_: expect value is the \_id property of the user
 **@access:** Public
 Client route _/users/password/reset?email=${user.email}&token=${passwordResetToken}_
 Extract "email" and "token"
-_:passwordResetToken => password reset token sent to user mail_: expect value is the token from the above "token" query
+_:passwordResetToken => password reset token sent to user mail_: <br /> expected value is the token from the above "token" query
 
 > **@request_body:** _No request body_
 
@@ -344,7 +344,7 @@ _:id => category id to be updated_
 
 **@route:** **PUT** _/api/sermons/:id_
 **@access:** Private/Admin
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon
 
 **@request_body:**
 
@@ -374,7 +374,7 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 **@route:** **PATCH** _/api/sermons/trash/:id_
 **@access:** Private/Admin
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon
 
 **@request_body:** _No request body_
 
@@ -386,7 +386,7 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 **@route:** **PUT** _/api/sermons/:id_
 **@access:** Private/Admin
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon
 
 **@request_body:** _No request body_
 
@@ -398,7 +398,7 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 **@route:** **GET** _/api/sermons/:id_ <br />
 **@access:** Public <br />
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon <br />
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon <br />
 
 **@request_body:** _No request body_ <br />
 
@@ -419,7 +419,7 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 **@route:** **GET** _/api/sermons/:id/banner_ <br />
 **@access:** Public<br />
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon<br />
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon<br />
 <br />
 **@request_body:** _No request body_<br />
 
@@ -431,12 +431,12 @@ _:id => sermon id to be updated_: expect value is the \_id property of the sermo
 
 **@route:** **POST** _/api/sermons/:id/banner_<br />
 **@access:** Private/Admin<br />
-_:id => sermon id to be updated_: expect value is the \_id property of the sermon<br />
+_:id => sermon id to be updated_: <br /> expected value is the \_id property of the sermon<br />
 
 **@request_body:** send as "form data" containing the file alone<br />
 
 > file input of name="banner"<br />
 
-**@response:**<br />
+**@response:**
 
-> { message: `'Sermon banner updated successfully'` } <br />
+> { message: `'Sermon banner updated successfully'` }
